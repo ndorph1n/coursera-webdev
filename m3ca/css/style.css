@@ -1,0 +1,11 @@
+body {
+    font-family: 'Comic Sans MS';
+}
+
+.bg-secondary {
+    background-color: rgb(161, 161, 161) !important;
+}
+
+p {
+    font-size: 0.9rem;
+}

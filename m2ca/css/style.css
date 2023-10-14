@@ -1,0 +1,112 @@
+:root {
+    --section-main-color: gray;
+    --menu-chicken-color: yellow;
+    --menu-beef-color: brown;
+    --menu-pizza-color: orange;
+    --border-main-color: black;
+    --body-main-color: rgb(255, 248, 154);
+    --body-gradient-first: rgba(255, 248, 154, 0.7) 0%;
+    --body-gradient-second: rgba(241, 213, 4, 0.7) 100%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Comic Sans MS";
+
+    background: var(--body-main-color);
+    background: linear-gradient(180deg, var(--body-gradient-first), var(--body-gradient-second));
+}
+
+.menu {
+    height: 100vh;
+    width: 100%;
+    padding: 100px 15px 0 15px;
+    
+}
+
+.menu-section {
+    position: relative;
+    float: left;
+    width: 33%;
+}
+
+.menu-header {
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    font-size: 175%;
+}
+
+.menu-content {
+    position: relative;
+
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 10px 10px 10px;
+    border: 1px solid var(--border-main-color);
+
+    background-color: var(--section-main-color);
+}
+
+.menu-title {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 2px 5px;
+    border-left: 1px solid var(--border-main-color);
+    border-bottom: 1px solid var(--border-main-color);
+
+    background-color: var(--menu-chicken-color);
+
+    font-weight: 600;
+    font-size: 125%;
+}
+.menu-title--beef {
+    background-color: var(--menu-beef-color);
+}
+.menu-title--pizza {
+    background-color: var(--menu-pizza-color);
+}
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+    body{
+        font-size: 14px;
+    }
+    
+    .menu-section {
+        width: 50%;
+    }
+
+    .menu-section:nth-child(4) {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .menu-section:nth-child(4) .menu-content{
+        width: 95%;
+    }
+}
+
+@media (max-width: 575px) {
+    body {
+        font-size: 12px;
+    }
+
+    .menu-section {
+        width: 100%;
+        
+        margin-bottom: 10px;
+    }
+    
+    .menu-content {
+        padding: 30px 0 10px 0;    
+    }
+}
