@@ -1,10 +1,13 @@
 (function(window){
+    var logger = document.getElementById("log");
+    var speakWord = "Good Bye";
+
     var byeSpeaker = {
         speak(name){
-            console.log(speakWord + " " + name);
+            logger.innerHTML+=speakWord + " " + name + "<br>";
+            logger.scrollTo(0, logger.scrollHeight);
         }
     }
-    var speakWord = "Good Bye";
-    
+
     window.byeSpeaker = byeSpeaker;
 })(window);
